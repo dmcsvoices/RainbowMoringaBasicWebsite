@@ -1,0 +1,550 @@
+@import url('https://fonts.googleapis.com/css2?family=Pacifico&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=M+PLUS+1+Code:wght@700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Architects+Daughter&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Teko:wght@500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Asap&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Yeseva+One&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@600&display=swap');
+
+
+
+body {
+    background-color: rgb(148, 210, 189);
+}
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+a {
+    font-family: 'Teko','Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;  
+    font-size: 20px;
+    
+
+}
+
+p {
+    font-family: 'Asap', sans-serif;
+}
+
+blank {
+    font-style: normal;
+    margin: 100px;
+} 
+
+input {
+    box-shadow: 2px 2px 7px rgb(22, 7, 7);
+}
+     
+label {
+    font-family: 'Asap', sans-serif;
+}
+
+
+[type=text], [type=number], [type=submit] {
+    padding: 8px;
+    width: 150px;
+}
+
+[type=submit] {
+    padding: 8px;
+    width: 75px;
+    margin: 6px;
+}
+
+
+
+
+
+
+@media screen and (max-width: 700px) {
+    
+
+    #nav-header {
+        color: rgb(155, 34, 38);
+        font-family: "Palatino Linotype", "Book Antiqua", Palatino, serif;
+        font-size: 17px;
+        letter-spacing: 0.4px;
+        word-spacing: 0.4px;
+        color: #000000;
+        font-weight: normal;
+        text-decoration: none;
+        font-style: normal;
+        font-variant: normal;
+        text-transform: none;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;  
+        align-items: baseline;
+    }
+
+    #logo-reference {
+        color: rgb(238, 155, 0);
+        font-family: 'Yeseva One', cursive;
+        font-size: 40px;
+        text-shadow: 2px 2px 7px rgb(22, 7, 7);
+        margin: 2px;
+        display: flex;
+        flex-direction: row-reverse;
+        justify-content: flex-end;    
+        cursor: pointer;
+    }
+    #menu__toggle {
+        opacity: 0;
+    }
+    
+    #menu__toggle:checked ~ .menu__btn > span {
+        transform: rotate(45deg);
+    }
+    #menu__toggle:checked ~ .menu__btn > span::before {
+        top: 0;
+        transform: rotate(0);
+    }
+    #menu__toggle:checked ~ .menu__btn > span::after {
+        top: 0;
+        transform: rotate(90deg);
+    }
+    #menu__toggle:checked ~ .menu__box {
+        visibility: visible;
+        left: 0;
+    }
+    
+    .menu__btn {
+        display: flex;
+        align-items: center;
+        position: fixed;
+        top: 20px;
+        left: 20px;
+    
+        width: 26px;
+        height: 26px;
+    
+        cursor: pointer;
+        z-index: 1;
+    }
+    
+    .menu__btn > span,
+    .menu__btn > span::before,
+    .menu__btn > span::after {
+        display: block;
+        position: absolute;
+    
+        width: 100%;
+        height: 2px;
+    
+        background-color: #616161;
+    
+        transition-duration: .25s;
+    }
+    .menu__btn > span::before {
+        content: '';
+        top: -8px;
+    }
+    .menu__btn > span::after {
+        content: '';
+        top: 8px;
+    }
+    
+    .menu__box {
+        display: block;
+        position: fixed;
+        visibility: hidden;
+        top: 0;
+        left: -100%;
+    
+        width: 300px;
+        height: 100%;
+    
+        margin: 0;
+        padding: 80px 0;
+    
+        list-style: none;
+    
+        background-color: #ECEFF1;
+        box-shadow: 1px 0px 6px rgba(0, 0, 0, .2);
+    
+        transition-duration: .25s;
+    }
+    
+    .menu__item {
+        display: block;
+        padding: 12px 24px;
+    
+        color: #333;
+    
+        font-family: 'Roboto', sans-serif;
+        font-size: 20px;
+        font-weight: 600;
+    
+        text-decoration: none;
+    
+        transition-duration: .25s;
+    }
+    .menu__item:hover {
+        background-color: #CFD8DC;
+    }
+
+    .nav-header-links {
+        visibility: hidden;
+    }
+
+    .form-title {
+        font-size: 20px;
+        margin: 5px;
+        padding-bottom: 4px;
+        display: flex;
+        flex-direction: row;
+        justify-content: flex-start;
+    }
+
+    .form-section {
+        width: 50%;
+        margin: 10px 10px 5px;
+        padding-left: 154px;
+        padding-top: 10px;
+        padding-right: 70px;
+        padding-bottom: 5px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-evenly;
+        align-items: center;
+    
+    }
+
+    p {
+        width: 215px;
+        margin:21px;
+        padding-left: 46px;
+    }
+    
+    #form-WantToBuy {
+        
+        background: rgb(148, 210, 189);
+        padding: 30px;
+        border: none;
+        border-radius: 30px;
+        margin: 30px 30px 100px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .article-title {
+        color: rgb(0, 95, 115);
+        font-family: 'Architects Daughter', cursive;
+        font-size: 20px;
+        margin: 30px 75px 10px;
+        display: flex;
+        flex-direction: row;
+        justify-content: flex-start;
+    }
+    
+    
+    
+    .article-section {
+        margin: 10px 10px 5px;
+        padding-left: 70px;
+        padding-top: 10px;
+        padding-right: 70px;
+        padding-bottom: 5px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    
+    }
+
+    p {
+        display: flex;
+        flex-direction: row;
+        justify-content: flex-start;
+        margin-left: -100px;
+    }
+
+    ul {
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        margin-left: 12px;
+        box-shadow: 2px 2px 7px rgb(22, 7, 7);
+
+        background-color: rgb(148, 210, 189);
+        
+        border-color: rgb(0, 95, 115);
+        border-radius: 20px; 
+        border-style: none;
+    }
+
+    li {
+        background-color: rgb(233, 216, 166);
+        font-family: 'Asap', sans-serif;
+        display: flex;
+        flex-direction: row;
+        justify-content: flex-start;
+        align-items: center; 
+        margin: 4px;
+        padding: 4px;   
+        border-color: rgb(0, 95, 115);
+        border-style:solid;
+        border-radius: 10px; 
+    }
+    footer {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center; 
+    }
+}
+
+@media screen and (min-width: 700px) {
+
+    #nav-header {
+        color: rgb(155, 34, 38);
+        font-family: "Palatino Linotype", "Book Antiqua", Palatino, serif;
+        font-size: 17px;
+        letter-spacing: 0.4px;
+        word-spacing: 0.4px;
+        color: #000000;
+        font-weight: normal;
+        text-decoration: none;
+        font-style: normal;
+        font-variant: normal;
+        text-transform: none;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;  
+        align-items: center;  
+    }
+    
+    
+    
+    #nav-footer {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;    
+    }
+    
+    
+    
+    #logo-reference {
+        color: rgb(238, 155, 0);
+        /*font-family: 'Yeseva One', cursive;*/
+        font-family: 'Josefin Sans', sans-serif;
+        font-size: 40px;
+        text-shadow: 2px 2px 7px rgb(22, 7, 7);
+        margin: 2px;
+        display: flex;
+        flex-direction: row-reverse;
+        justify-content: flex-end;    
+        cursor: pointer;
+
+    }
+    
+    
+    #go-to-buy-page {
+        margin: 22px;
+        padding: 7px;
+        box-shadow: 2px 2px 7px rgb(22, 7, 7);
+        background-color: rgb(148, 210, 189);
+        border: none;
+        border-width: 4px;
+        border-color: rgb(0, 95, 115);
+        border-radius: 20px;
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: flex-end;
+    }
+    
+    #form-WantToBuy {
+        width: 80%;
+        border-radius: 30px;
+        border: none;
+        box-shadow: 2px 2px 7px rgb(22, 7, 7);
+        background-color: rgb(148, 210, 189);
+    }
+
+    .article-title {
+        color: rgb(0, 95, 115);
+        font-family: 'Architects Daughter', cursive;
+        font-size: 20px;
+        margin: 30px 75px 10px;
+        display: flex;
+        flex-direction: row;
+        justify-content: flex-start;
+    }
+    
+    
+    
+    .article-section {
+        margin: 10px 10px 5px;
+        padding-left: 70px;
+        padding-top: 10px;
+        padding-right: 70px;
+        padding-bottom: 5px;
+        display: flex;
+    
+    }
+    
+    .form-title {
+        font-family: 'Architects Daughter', cursive;
+        font-size: 20px;
+        margin: 30px 75px 10px;
+        display: flex;
+        flex-direction: row;
+        justify-content: flex-start;
+    }
+    
+    
+    
+    .form-section {
+        margin: 10px 10px 5px;
+        padding-left: 70px;
+        padding-top: 10px;
+        padding-right: 70px;
+        padding-bottom: 5px;
+        display: flex;
+        flex-direction: row-reverse;
+        flex-grow: 1;
+        justify-content: center;
+        align-items: center;
+        max-width: 450px;
+    
+    }
+    
+    .form-section:nth-child(2) {
+        align-self: flex-start;
+    }
+    
+  
+    
+    .column-container {
+        display: flex;
+    }
+    
+    .column {
+        width: 40%;
+    }
+    button {
+        border: none;
+        box-shadow: 3px 3px 7px rgba(53, 45, 45, 0.6);
+        cursor: pointer;
+    }
+    
+    a {
+        margin: 4px;
+        padding: 4px;
+    }
+    
+    
+    
+    button {
+        border: none;
+        box-shadow: 3px 3px 7px rgb(8, 5, 5, 1);
+        cursor: pointer;
+    }
+    
+    form {
+        width: 30%;
+        background: rgb(233, 216, 166);
+        padding: 30px;
+        border: 15px solid rgb(0, 95, 115);
+        margin: 30px 30px 100px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    
+    }
+    
+    label {
+        padding: 2px;
+        margin: 2px;
+        border: 2px;
+    }
+
+    input {
+        padding: 2px;
+        margin: 2px;
+        border: 2px;
+    }
+
+    section {
+        font-style: normal;
+        margin: 44px;
+        padding: 44px;
+        border:dimgrey;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;    
+    }
+    
+    
+    ul {
+        background-color: rgb(148, 210, 189);
+        display: flex;
+        box-shadow: 2px 2px 7px rgb(22, 7, 7);
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: flex-start; 
+        margin: 27px;
+        padding: 10px;  
+        border-color: rgb(0, 95, 115);
+        border-radius: 20px; 
+        border-style: none;
+    }
+    
+    li {
+        background-color: rgb(233, 216, 166);
+        font-family: 'Asap', sans-serif;
+        display: flex;
+        flex-direction: row;
+        justify-content: flex-start;
+        align-items: center; 
+        margin: 4px;
+        padding: 4px;   
+        border-color: rgb(0, 95, 115);
+        border-style:solid;
+        border-radius: 10px; 
+    }
+    
+  
+    
+    div.hamburger-menu {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-evenly;
+        align-items: center;
+    }
+
+    ul.menu__box {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-evenly;
+        align-items: center;
+        margin: 2px;
+        padding: 2px;  
+        border-style:none;
+    }
+    
+    li.menu__box {
+        border: none;
+    }
+
+    .menu__box li {
+        border: none;
+        background-color: rgb(148 210 189);
+    }
+
+    footer {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center; 
+    }
+}
